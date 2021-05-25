@@ -1,0 +1,42 @@
+@mixin respond($breakpoint) {
+	@if $breakpoint == small-phone {
+		//0-380
+		@media only screen and (max-width: 23.75em) {
+			@content;
+		}
+	}
+	@if $breakpoint == phone {
+		//380-600
+		@media only screen and (max-width: 37.5em) {
+			@content;
+		}
+	}
+	@if $breakpoint == tab-port {
+		//600-900
+		@media only screen and (max-width: 56.25em) {
+			@content;
+		}
+	}
+	@if $breakpoint == tab-land {
+		//900-1200
+		@media only screen and (max-width: 75em) {
+			@content;
+		}
+	}
+	@if $breakpoint == big-desktop {
+		//1800-
+		@media only screen and (min-width: 112.5em) {
+			@content;
+		}
+	}
+}
+// @mixin btn {
+// 	outline: none;
+// 	border: none;
+// 	text-decoration: none;
+// 	color: var(--color-light);
+// 	background-color: var(--color-dark);
+// 	font-size: 1.6rem;
+// 	padding: 1.5rem 3rem;
+// 	cursor: pointer;
+// }

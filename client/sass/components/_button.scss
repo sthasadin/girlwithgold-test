@@ -1,0 +1,77 @@
+%btn {
+  outline: none;
+  border: none;
+  text-decoration: none;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+  font-size: 1.6rem;
+  padding: 1.5rem 3rem;
+  cursor: pointer;
+}
+%btn-inline {
+  text-decoration: none;
+  color: var(--color-black);
+  border: 2px solid currentColor;
+  padding: 1.5rem 3rem;
+  box-shadow: 1rem 0.7rem 0 0.2rem var(--color-primary);
+  background-color: transparent;
+  font-family: var(--font-serif-roboto);
+  cursor: pointer;
+}
+
+.btn {
+  @extend %btn;
+  &--red {
+    @extend %btn;
+    background-color: var(--color-red);
+  }
+
+  &--blue {
+    @extend %btn;
+    background-color: var(--color-blue);
+  }
+
+  &__anim {
+    &-border {
+      @extend %btn;
+      position: relative;
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 80%;
+        height: 50%;
+        transition: all 0.3s;
+      }
+      &::before {
+        top: 0;
+        left: 0;
+        border-top: 1px solid var(--color-white);
+        border-left: 1px solid var(--color-white);
+      }
+      &::after {
+        bottom: 0;
+        right: 0;
+        border-bottom: 1px solid var(--color-white);
+        border-right: 1px solid var(--color-white);
+      }
+      &:hover::before,
+      &:hover::after {
+        width: 50%;
+        height: 60%;
+      }
+    }
+  }
+  &__inline {
+    &--black {
+      @extend %btn-inline;
+      transition: all 0.3s;
+      &:hover {
+        box-shadow: 1rem 1rem 0 0.2rem darken($color-primary, 10%);
+      }
+      &:focus {
+        box-shadow: 1rem 1rem 0 0.2rem darken($color-primary, 10%);
+      }
+    }
+  }
+}

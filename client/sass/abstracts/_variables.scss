@@ -1,0 +1,37 @@
+//scss variables
+$color-white: #fff;
+$color-black: #000;
+$color-dark: #132c33;
+$color-light: #f9f3f3;
+
+$color-primary: #ca8a8b;
+$color-primary-light: #f5cebe;
+$color-primary-lighter: #f4ece9;
+
+$color-red: #fb3640;
+$color-blue: #2978b5;
+
+$color-gray-dark: #687980;
+
+//css variables
+:root {
+  //main colors
+  --color-black: #000;
+  --color-white: #fff;
+  --color-dark: #151515;
+  --color-light: #f9f3f3;
+
+  --color-primary: #ca8a8b;
+  --color-primary-light: #f5cebe;
+  --color-primary-lighter: #f4ece9;
+  --color-red: #fb3640;
+  --color-blue: #2978b5;
+
+  //fonts
+  --font-serif: 'Playfair Display', serif;
+  --font-serif-roboto: 'Roboto Slab', serif;
+  --font-sans-serif: 'Roboto', sans-serif;
+  --font-sans-serif-montserrat: 'Montserrat Alternates', sans-serif;
+
+  --color-gray-dark: #687980;
+}

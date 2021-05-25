@@ -1,0 +1,10 @@
+body {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: var(--font-sans-serif);
+  color: var(--color-dark);
+  ::selection {
+    color: var(--color-light);
+    background-color: var(--color-primary);
+  }
+}

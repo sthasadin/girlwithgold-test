@@ -1,0 +1,70 @@
+.products {
+  padding: 0 20rem;
+
+  background-image: radial-gradient(
+      circle 50rem at 10% 0,
+      var(--color-primary),
+      transparent
+    ),
+    radial-gradient(
+      circle 80rem at 80% 80%,
+      var(--color-primary-light),
+      transparent
+    );
+  &__container {
+    padding-left: 8%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    //justify-content: center;
+    background-color: #fff;
+  }
+  &__product {
+    flex: 0 0 22%;
+    display: flex;
+    margin: 2rem 1rem;
+    text-decoration: none;
+    flex-direction: column;
+    align-items: center;
+    //justify-content: space-between;
+    justify-content: flex-end;
+    height: 300px;
+    width: 300px;
+    background-color: #fff;
+    border: 0.1px solid lightgray;
+    &-image {
+      img {
+        // border-radius: 0.3rem;
+        // width: 200px;
+        // height: 100%;
+        // min-width: ;
+        // // max-height: 160px;
+
+        // object-fit: contain;
+        height: 200px;
+        width: 290px;
+        object-fit: contain;
+        margin-bottom: 15px;
+      }
+    }
+    &-price {
+      color: var(--color-gray-dark);
+      font-weight: 400;
+      font-size: 1.3rem;
+      margin: 1rem 0 1.5rem;
+      text-decoration: none;
+      &::before {
+        content: "Rs. ";
+      }
+    }
+    &-name {
+      display: flex;
+      font-family: var(--font-serif-roboto);
+      font-size: 2rem;
+      color: var(--color-dark);
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+  }
+}

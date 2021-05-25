@@ -1,0 +1,40 @@
+.popup {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  display: none;
+  overflow: scroll;
+
+  &__container {
+    width: 80%;
+    height: 80%;
+    background-color: var(--color-light);
+    border-radius: 0.5rem;
+  }
+  &__close {
+    display: block;
+    text-align: right;
+
+    &::after {
+      content: '+';
+      font-size: 3rem;
+      display: inline-block;
+      transform: rotateZ(45deg);
+      cursor: pointer;
+      padding: 0.5rem 1.5rem;
+      background-color: var(--color-blue);
+      border-radius: 50%;
+      margin-right: 0.5rem;
+      margin-top: 0.5rem;
+    }
+  }
+  &:target {
+    display: flex;
+  }
+}
